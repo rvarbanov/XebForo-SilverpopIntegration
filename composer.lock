@@ -1,0 +1,106 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "e26f410c32d5ee8c162403b718d928d2",
+    "packages": [
+        {
+            "name": "mrmarkfrench/silverpop-php-connector",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mrmarkfrench/silverpop-php-connector.git",
+                "reference": "7c8ace4c4a785f9961d4ccfa2308acf8450e1387"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mrmarkfrench/silverpop-php-connector/zipball/7c8ace4c4a785f9961d4ccfa2308acf8450e1387",
+                "reference": "7c8ace4c4a785f9961d4ccfa2308acf8450e1387",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-xml": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark French"
+                }
+            ],
+            "description": "A connector SDK library for applications integrating with Silverpop, including the Silverpop Universal Behavior API",
+            "homepage": "https://github.com/mrmarkfrench/silverpop-php-connector",
+            "keywords": [
+                "Silverpop"
+            ],
+            "time": "2015-08-11 20:48:15"
+        },
+        {
+            "name": "simpleweb/silverpopphp",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simpleweb/SilverpopPHP.git",
+                "reference": "8de3228b9994c76a85e3624d7cf73e3a9bfacf8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/simpleweb/SilverpopPHP/zipball/8de3228b9994c76a85e3624d7cf73e3a9bfacf8e",
+                "reference": "8de3228b9994c76a85e3624d7cf73e3a9bfacf8e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Silverpop": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL"
+            ],
+            "authors": [
+                {
+                    "name": "David Haywood Smith",
+                    "email": "davehs@gmail.com",
+                    "homepage": "https://github.com/DHS/"
+                }
+            ],
+            "description": "Silverpop API in php",
+            "homepage": "https://github.com/simpleweb/SilverpopPHP",
+            "keywords": [
+                "Silverpop",
+                "XML-API",
+                "api",
+                "email"
+            ],
+            "time": "2015-06-11 07:23:44"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "simpleweb/silverpopphp": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
