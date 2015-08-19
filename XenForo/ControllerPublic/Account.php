@@ -11,7 +11,6 @@ class SilverpopIntegration_XenForo_ControllerPublic_Account extends XFCP_Silverp
         $viewParams = array(
             'silverpopintegration_subscription' => $visitor['silverpopintegration_subscription']
         );
-        //Zend_Debug::dump($visitor);
 
         return $this->_getWrapper(
             'account', 'emailPreferences',
@@ -32,23 +31,17 @@ class SilverpopIntegration_XenForo_ControllerPublic_Account extends XFCP_Silverp
             return $this->responseNoPermission();
         }
 
-        $settings = $this->_input->filter(array(
-            //user_option
-            'silverpopintegration_subscription' => XenForo_Input::UINT
-        ));
+        $settings = $this->_input->filter(array('silverpopintegration_subscription' => XenForo_Input::UINT));
 
         $writer = XenForo_DataWriter::create('XenForo_DataWriter_User');
         $writer->setExistingData(XenForo_Visitor::getUserId());
         $writer->bulkSet($settings);
-        //Zend_Debug::dump($writer);
 
         if ($dwErrors = $writer->getErrors()) {
             return $this->responseError($dwErrors);
         }
 
         $writer->save();
-
-
 
         $silverpop = new SilverpopIntegration_Core;
 
@@ -62,9 +55,6 @@ class SilverpopIntegration_XenForo_ControllerPublic_Account extends XFCP_Silverp
         );
 
         $silverpop->addContact($config['DatabaseID'], $xf_user);
-
-
-
 
         return $this->responseRedirect(
             XenForo_ControllerResponse_Redirect::SUCCESS,

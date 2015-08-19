@@ -1,12 +1,7 @@
 <?php
 
-$dir = dirname(__FILE__);
-//require_once $dir . '/ThirdParties/SendyPHP.php';
-//require_once $dir . '/Silverpop/EngagePod.php';
 require_once 'vendor/autoload.php';
 
-//use SendyPHP\SendyPHP;
-//use Silverpop\EngagePod;
 use SilverpopConnector\SilverpopConnector;
 
 class SilverpopIntegration_Core {
@@ -69,22 +64,11 @@ class SilverpopIntegration_Core {
     }
 
     public function createConnection($config) {
-        /*$config = array(
-            'username'          => SilverpopIntegration_Option::get('UserName'),
-            'password' 			=> SilverpopIntegration_Option::get('UserPassword'),
-            'baseUrl'           => SilverpopIntegration_Option::get('EngageServer'),
-
-            'DatabaseID'        => SilverpopIntegration_Option::get('DatabaseID'),
-
-            'client_id'         => SilverpopIntegration_Option::get('ClientID'),
-            'client_secret'     => SilverpopIntegration_Option::get('ClientSecret'),
-            'refresh_token'     => SilverpopIntegration_Option::get('RefreshToken')
-        );*/
-
         // Setting base URL...
         SilverpopConnector::getInstance($config['baseUrl']);
         // Authenticating to REST API...
 
+        // TODO: need to cache $access_token and use it from cache
         $access_token = false;
         //$access_token = Cache::read('access_token', 'silverpop');
         // If Silverpop Access Token has expired get a new one

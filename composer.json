@@ -1,6 +1,5 @@
 {
     "require": {
-        "simpleweb/silverpopphp": "master-dev",
         "mrmarkfrench/silverpop-php-connector": "*"
     }
 }

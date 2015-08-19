@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="silverpopIntegration" title="Silverpop Integration" version_string="0.0.2" version_id="4" url="http://www.varbanov.me" install_callback_class="SilverpopIntegration_Installer" install_callback_method="install" uninstall_callback_class="SilverpopIntegration_Installer" uninstall_callback_method="uninstall">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners>
+    <listener event_id="load_class_controller" execute_order="10" callback_class="SilverpopIntegration_Listener" callback_method="loadControllers" active="1" hint="" description="Extend XenForo account controller with Email Preferences [SilverpopIntegration_Listener::loadControllers]"/>
+    <listener event_id="load_class_datawriter" execute_order="10" callback_class="SilverpopIntegration_Listener" callback_method="loadControllers" active="1" hint="" description="[SilverpopIntegration_Listener::loadControllers]"/>
+    <listener event_id="load_class_model" execute_order="10" callback_class="SilverpopIntegration_Listener" callback_method="loadControllers" active="1" hint="" description="[SilverpopIntegration_Listener::loadControllers]"/>
+    <listener event_id="template_create" execute_order="10" callback_class="SilverpopIntegration_XenForo_Listener_Sidebar" callback_method="sidebarTemplateCreate" active="1" hint="" description="Pre-cache sidebar navigation [SilverpopIntegration_XenForo_Listener_Sidebar::sidebarTemplateCreate]"/>
+    <listener event_id="template_hook" execute_order="10" callback_class="SilverpopIntegration_XenForo_Listener_Sidebar" callback_method="sidebarTemplateHook" active="1" hint="" description="Echo out sidebar navigation [SilverpopIntegration_XenForo_Listener_Sidebar::sidebarTemplateHook]"/>
+  </code_event_listeners>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups>
+    <group group_id="silverpopintegrationOptions" display_order="1" debug_only="0"/>
+    <option option_id="silverpopAccessToken" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="silverpopintegrationOptions" display_order="8"/>
+    </option>
+    <option option_id="silverpopClientID" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="silverpopintegrationOptions" display_order="5"/>
+    </option>
+    <option option_id="silverpopClientSecret" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="silverpopintegrationOptions" display_order="6"/>
+    </option>
+    <option option_id="silverpopDatabaseID" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="silverpopintegrationOptions" display_order="3"/>
+    </option>
+    <option option_id="silverpopEngageServer" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="silverpopintegrationOptions" display_order="4"/>
+    </option>
+    <option option_id="silverpopRefreshToken" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="silverpopintegrationOptions" display_order="7"/>
+    </option>
+    <option option_id="silverpopUserPassword" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="silverpopintegrationOptions" display_order="2"/>
+    </option>
+  </optiongroups>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases>
+    <phrase title="option_group_silverpopintegrationOptions" version_id="1" version_string="0.0.1"><![CDATA[Silverpop Integration Options]]></phrase>
+    <phrase title="option_group_silverpopintegrationOptions_description" version_id="1" version_string="0.0.1"><![CDATA[]]></phrase>
+    <phrase title="option_silverpopAccessToken" version_id="2" version_string="0.0.1"><![CDATA[Silverpop Access Token]]></phrase>
+    <phrase title="option_silverpopAccessToken_explain" version_id="2" version_string="0.0.1"><![CDATA[Please ignore this area. 
+Silverpop Integration add-on uses that to store a temporary Access Token.]]></phrase>
+    <phrase title="option_silverpopClientID" version_id="1" version_string="0.0.1"><![CDATA[Silverpop Client ID]]></phrase>
+    <phrase title="option_silverpopClientID_explain" version_id="1" version_string="0.0.1"><![CDATA[E.g. xxxxxxxx-xxx-xxxx-xxxx-xxxxxxxxxxxx]]></phrase>
+    <phrase title="option_silverpopClientSecret" version_id="1" version_string="0.0.1"><![CDATA[Silverpop Client Secret]]></phrase>
+    <phrase title="option_silverpopClientSecret_explain" version_id="1" version_string="0.0.1"><![CDATA[E.g. xxxxxxxx-xxx-xxxx-xxxx-xxxxxxxxxxxx]]></phrase>
+    <phrase title="option_silverpopDatabaseID" version_id="1" version_string="0.0.1"><![CDATA[Silverpop Database ID]]></phrase>
+    <phrase title="option_silverpopDatabaseID_explain" version_id="1" version_string="0.0.1"><![CDATA[E.g. 123456789]]></phrase>
+    <phrase title="option_silverpopEngageServer" version_id="2" version_string="0.0.1"><![CDATA[Silverpop Engage Server]]></phrase>
+    <phrase title="option_silverpopEngageServer_explain" version_id="2" version_string="0.0.1"><![CDATA[E.g. https://api4.silverpop.com]]></phrase>
+    <phrase title="option_silverpopRefreshToken" version_id="1" version_string="0.0.1"><![CDATA[Silverpop Refresh Token]]></phrase>
+    <phrase title="option_silverpopRefreshToken_explain" version_id="1" version_string="0.0.1"><![CDATA[E.g. xxxxxxxx-xxx-xxxx-xxxx-xxxxxxxxxxxx]]></phrase>
+    <phrase title="option_silverpopUserPassword" version_id="1" version_string="0.0.1"><![CDATA[Silverpop User Password]]></phrase>
+    <phrase title="option_silverpopUserPassword_explain" version_id="1" version_string="0.0.1"><![CDATA[E.g. *******************]]></phrase>
+    <phrase title="silverpopintegration_sidebar_email_preferences" version_id="1" version_string="0.0.1"><![CDATA[Email Preferences]]></phrase>
+  </phrases>
+  <route_prefixes/>
+  <style_properties/>
+  <templates>
+    <template title="silverpopintegration_account_email_preferences" version_id="2" version_string="0.0.1"><![CDATA[<xen:title>{xen:phrase silverpopintegration_email_preferences}</xen:title>
+
+<xen:require css="silverpopintegration_account_email_preferences.css" />
+
+<form method="post" class="xenForm formOverlay NoFixedOverlay AutoValidator"
+    action="{xen:link 'account/email-preferences-save'}"
+    data-fieldValidatorUrl="{xen:link 'account/validate-field.json'}"
+    data-redirect="yes">
+
+    <h3 class="sectionHeader">{xen:phrase silverpopintegration_options}</h3>
+
+    <xen:hook name="silverpopintegration_account_email_preferences_options">
+    <dl class="ctrlUnit">
+        <dt></dt>
+        <dd>
+            <ul>
+                <li>
+                    <label for="ctrl_silverpopintegration_subscription"><input type="checkbox" name="silverpopintegration_subscription" value="1" id="ctrl_silverpopintegration_subscription" class="OptOut Disabler" {xen:checked "{$silverpopintegration_subscription}"} /> {xen:phrase silverpopintegration_subscription}</label>
+                    <p class="hint">{xen:phrase silverpopintegration_subscription_hint}</p>
+                    <!--<ul id="silverpopintegration_subscription_weekly">
+                        <li>
+                            <label><input type="checkbox" name="activity_visible" value="1" class="OptOut" {xen:checked $silverpopintegration_subscription} /> {xen:phrase show_your_current_activity}</label>
+                            <p class="hint">{xen:phrase this_will_allow_other_people_to_see_what_page_you_currently_viewing}</p>
+                        </li>
+                    </ul>-->
+                </li>
+            </ul>
+            <xen:if is="!{$xenOptions.swfUpload}">
+                <input type="hidden" name="enable_flash_uploader" value="{xen:if $visitor.enable_flash_uploader, 1, 0}" />
+            </xen:if>
+        </dd>
+    </dl>
+
+    </xen:hook>
+
+    <dl class="ctrlUnit submitUnit">
+        <dt></dt>
+        <dd><input type="submit" name="save" value="{xen:phrase save_changes}" accesskey="s" class="button primary" /></dd>
+    </dl>
+
+    <input type="hidden" name="_xfToken" value="{$visitor.csrf_token_page}" />
+</form>]]></template>
+    <template title="silverpopintegration_sidebar_email_preferences" version_id="1" version_string="0.0.1"><![CDATA[<xen:if is="{$canEditProfile}"><li><a class="{xen:if "{$selectedKey} == 'account/emailPreferences'", 'secondaryContent', 'primaryContent'}" href="{xen:link account/email-preferences}">{xen:phrase silverpopintegration_sidebar_email_preferences}</a></li></xen:if>]]></template>
+  </templates>
+  <public_template_modifications/>
+  <bb_code_media_sites/>
+  <bb_codes/>
+</addon>
