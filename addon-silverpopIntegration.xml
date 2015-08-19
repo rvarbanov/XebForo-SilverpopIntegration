@@ -54,6 +54,12 @@
       <sub_options></sub_options>
       <relation group_id="silverpopintegrationOptions" display_order="7"/>
     </option>
+    <option option_id="silverpopUserName" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="silverpopintegrationOptions" display_order="1"/>
+    </option>
     <option option_id="silverpopUserPassword" edit_format="textbox" data_type="string" can_backup="1">
       <default_value></default_value>
       <edit_format_params></edit_format_params>
@@ -82,6 +88,8 @@ Silverpop Integration add-on uses that to store a temporary Access Token.]]></ph
     <phrase title="option_silverpopEngageServer_explain" version_id="2" version_string="0.0.1"><![CDATA[E.g. https://api4.silverpop.com]]></phrase>
     <phrase title="option_silverpopRefreshToken" version_id="1" version_string="0.0.1"><![CDATA[Silverpop Refresh Token]]></phrase>
     <phrase title="option_silverpopRefreshToken_explain" version_id="1" version_string="0.0.1"><![CDATA[E.g. xxxxxxxx-xxx-xxxx-xxxx-xxxxxxxxxxxx]]></phrase>
+    <phrase title="option_silverpopUserName" version_id="4" version_string="0.0.2"><![CDATA[Silverpop User Name]]></phrase>
+    <phrase title="option_silverpopUserName_explain" version_id="4" version_string="0.0.2"><![CDATA[E.g. silverpop@yourdomain.com]]></phrase>
     <phrase title="option_silverpopUserPassword" version_id="1" version_string="0.0.1"><![CDATA[Silverpop User Password]]></phrase>
     <phrase title="option_silverpopUserPassword_explain" version_id="1" version_string="0.0.1"><![CDATA[E.g. *******************]]></phrase>
     <phrase title="silverpopintegration_sidebar_email_preferences" version_id="1" version_string="0.0.1"><![CDATA[Email Preferences]]></phrase>
