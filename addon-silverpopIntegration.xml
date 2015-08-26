@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<addon addon_id="silverpopIntegration" title="Silverpop Integration" version_string="0.0.3" version_id="7" url="http://www.varbanov.me" install_callback_class="SilverpopIntegration_Installer" install_callback_method="install" uninstall_callback_class="SilverpopIntegration_Installer" uninstall_callback_method="uninstall">
+<addon addon_id="silverpopIntegration" title="Silverpop Integration" version_string="0.0.3" version_id="8" url="http://www.varbanov.me" install_callback_class="SilverpopIntegration_Installer" install_callback_method="install" uninstall_callback_class="SilverpopIntegration_Installer" uninstall_callback_method="uninstall">
   <admin_navigation/>
   <admin_permissions/>
   <admin_style_properties/>
@@ -85,7 +85,7 @@ Silverpop Integration add-on uses that to store a temporary Access Token.]]></ph
     <phrase title="option_silverpopDatabaseID" version_id="1" version_string="0.0.1"><![CDATA[Silverpop Database ID]]></phrase>
     <phrase title="option_silverpopDatabaseID_explain" version_id="1" version_string="0.0.1"><![CDATA[E.g. 123456789]]></phrase>
     <phrase title="option_silverpopEngageServer" version_id="2" version_string="0.0.1"><![CDATA[Silverpop Engage Server]]></phrase>
-    <phrase title="option_silverpopEngageServer_explain" version_id="2" version_string="0.0.1"><![CDATA[E.g. https://api4.silverpop.com]]></phrase>
+    <phrase title="option_silverpopEngageServer_explain" version_id="8" version_string="0.0.3"><![CDATA[E.g. http://api4.silverpop.com]]></phrase>
     <phrase title="option_silverpopRefreshToken" version_id="1" version_string="0.0.1"><![CDATA[Silverpop Refresh Token]]></phrase>
     <phrase title="option_silverpopRefreshToken_explain" version_id="1" version_string="0.0.1"><![CDATA[E.g. xxxxxxxx-xxx-xxxx-xxxx-xxxxxxxxxxxx]]></phrase>
     <phrase title="option_silverpopUserName" version_id="4" version_string="0.0.2"><![CDATA[Silverpop User Name]]></phrase>
