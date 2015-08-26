@@ -2,6 +2,9 @@
 
 This is an add-on for XenForo that allows you to integrate Silverpop
 
+
+A mysql query that I used to export the xenforo user emails to use on Silverpop:
+```
 SELECT u.user_id AS xf_user_id, u.username AS xf_username, u.email AS Email, IF(uo.receive_admin_email = 0, 'No', 'Yes') AS _newswire_subscription
 FROM xf_user u
 JOIN xf_user_option uo ON u.user_id = uo.user_id
@@ -12,3 +15,4 @@ AND u.is_banned = 0
 AND u.email != ''
 
 LIMIT 0, 9999999999999
+```
